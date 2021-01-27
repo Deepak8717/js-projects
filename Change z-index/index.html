@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        position: absolute;
+        width: 400px;
+        height: 200px;
+      }
+      #redbox {
+        background-color: #f00;
+        top: 100px;
+        left: 100px;
+        z-index: 1;
+      }
+      #bluebox {
+        background-color: #00f;
+        top: 50px;
+        left: 50px;
+        z-index: -1;
+      }
+    </style>
+    <title>Click on the box</title>
+  </head>
+  <body>
+    <p>Click on the box to bring it on top</p>
+    <div id="redbox" class="box"></div>
+    <div id="bluebox" class="box"></div>
+    <script>
+      const redBox = document.getElementById("redbox");
+      const blueBox = document.getElementById("bluebox");
+      redBox.addEventListener("click", () => {
+        redBox.style.zIndex = 1;
+        blueBox.style.zIndex = -1;
+      });
+      blueBox.addEventListener("click", () => {
+        redBox.style.zIndex = -1;
+        blueBox.style.zIndex = 1;
+      });
+    </script>
+  </body>
+</html>
