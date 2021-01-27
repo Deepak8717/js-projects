@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Autocomplete Assignment</title>
+  </head>
+  <body>
+    <h1>JavaScript Homework</h1>
+    <p>
+      Add the JavaScript code needed to enable auto-complete on this form.
+      Whenever the checkbox is checked, the code should automatically copy the
+      values from Shipping Name and Shipping Zip into the Billing Name and
+      Billing Zip. If the checkbox is unchecked, the Billing Name and Billing
+      Zip should go blank.
+    </p>
+    <form>
+      <fieldset>
+        <legend>Shipping Information</legend>
+        <label for="shippingName">Name:</label>
+        <input type="text" name="shipName" id="shippingName" required /><br />
+        <label for="shippingzip">Zip Code:</label>
+        <input
+          type="text"
+          name="shipZip"
+          id="shippingzip"
+          pattern="[0-9]{5}"
+          required
+        />
+      </fieldset>
+      <input
+        type="checkbox"
+        id="same"
+        name="same"
+        onchange="billingFunction()"
+      />
+      <label for="same"
+        >Check the box if billing is same as shipping address
+      </label>
+      <fieldset>
+        <legend>Billing Information</legend>
+        <label for="billingName">Name:</label>
+        <input type="text" name="billName" id="billingName" required /><br />
+        <label for="billingZip">Zip Code:</label>
+        <input
+          type="text"
+          name="billZip"
+          id="billingZip"
+          pattern="[0-9]{5}"
+          required
+        />
+      </fieldset>
+      <input type="submit" value="verify" />
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
