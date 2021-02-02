@@ -1,0 +1,32 @@
+.tab-group {
+  display: flex;
+  justify-content: center;
+}
+.tab {
+  padding: 5px;
+  border: solid 1px #ccc;
+  list-style: none;
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+}
+.panel-group {
+  height: 100px;
+  border: solid 1px #ccc;
+  border-top: none;
+  background: #eee;
+  padding: 20px;
+}
+.panel {
+  display: none;
+  visibility: 0;
+}
+.is-active {
+  background: #f00;
+  color: #fff;
+}
+.show-panel {
+  display: block;
+  visibility: 1;
+  transition: all 1s ease;
+}
